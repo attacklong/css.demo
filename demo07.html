@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>对话框 </title>
+	<style type="text/css">
+		.demo{
+			background-color: #6a6;
+			width:300px;
+			height:50px;
+			margin:50px auto;
+			border-radius: 10px;
+			line-height: 50px;
+			padding: 10px;
+			color:#fff;
+			position: relative;
+		}
+		.demo::before{
+			content: '';
+			border-left:0px solid #6a6; 
+			border-top:15px solid transparent; 
+			border-bottom:15px solid transparent;
+			border-right:15px solid #6a6;
+            position: absolute;
+            left:-14px;
+            top:20px;
+		}
+	</style>
+</head>
+<body>
+<div class="demo">Hello,everyone</div>
+</body>
+</html>

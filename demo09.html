@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>star</title>
+	<style type="text/css">
+		#star{
+			width:0px;
+			height:0px;
+			border-bottom:70px solid red;
+			border-left:100px solid transparent;
+			border-right:100px solid transparent;
+			margin:150px auto;
+			-webkit-transform:rotate(35deg);
+			-ms-transform:rotate(35deg);
+			-o-transform:rotate(35deg);
+			transform:rotate(35deg);
+			position: relative;
+		}
+		#star::before{
+			content: '';
+			width:0px;
+			height:0px;
+			border-bottom:80px solid red;
+			border-left:30px solid transparent;
+			border-right:30px solid transparent;
+			margin:150px auto;
+			-webkit-transform:rotate(-35deg);
+			-ms-transform:rotate(-35deg);
+			-o-transform:rotate(-35deg);
+			transform:rotate(-35deg);
+			position: absolute;
+			top:-200px;
+			left:-65px;
+		}
+		#star::after{
+			content: '';
+			border-bottom:70px solid red;
+			border-left:100px solid transparent;
+			border-right:100px solid transparent;
+			margin:150px auto;
+			-webkit-transform:rotate(-70deg);
+			-ms-transform:rotate(-70deg);
+			-o-transform:rotate(-70deg);
+			transform:rotate(-70deg);
+			position: absolute;
+			top:-150px;
+			left:-100px;
+		}
+		.star {
+  position: relative;
+}
+.star:before, .star:after {
+  position: absolute;
+  content: "";
+  left: 70px; top: 0;
+  width: 70px;
+  height: 115px;
+  background: red;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0; 
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+.star:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%; 
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin :100% 100%;
+} 
+	</style>
+</head>
+<body>
+       <div id="star"></div>
+       <div class="star"></div>
+</body>
+</html>

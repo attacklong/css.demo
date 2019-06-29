@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天框</title>
+    <style type="text/css">
+        .talk_con{
+            width:600px;
+            height:540px;
+            border:1px solid #666;
+            margin:50px auto 0;
+            background:#f9f9f9;
+        }
+        .talk_show{
+            width:580px;
+            height:420px;
+            border:1px solid #666;
+            background:#fff;
+            margin:10px auto 0;
+            overflow:auto;
+        }
+        .talk_input{
+            width:580px;
+            margin:10px auto 0;
+        }
+        .whotalk{
+            width:80px;
+            height:30px;
+            float:left;
+            outline:none;
+        }
+        .talk_word{
+            width:420px;
+            height:26px;
+            padding:0px;
+            float:left;
+            margin-left:10px;
+            outline:none;
+            text-indent:10px;
+        }        
+        .talk_sub{
+            width:56px;
+            height:30px;
+            float:left;
+            margin-left:10px;
+        }
+        .atalk{
+           margin:10px; 
+        }
+        .atalk span{
+            display:inline-block;
+            background:#aaa;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+        .btalk{
+            margin:10px;
+            text-align:right;
+        }
+        .btalk span{
+            display:inline-block;
+            background:lightgreen;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+        .title{
+            color:#aaa;
+            font-size:10px;
+        }
+        img{
+        	width:25px;
+        	hright:25px;
+        }
+        .header{
+        	margin-left:20px;
+        	margin-top:20px;
+        }
+        .cont{
+        	float:right;
+        	width:100px;
+        	height:20px;
+        	margin-right:5px;
+        	margin-top:0px;
+        }
+        .name{
+        	margin-left:10px;
+        }
+        button{
+        	width:25px;
+        	height:25px;
+        }
+    </style>
+    <script type="text/javascript">  
+        window.onload = function(){
+            var Words = document.getElementById("words");
+            var Who = document.getElementById("who");
+            var TalkWords = document.getElementById("talkwords");
+            var TalkSub = document.getElementById("talksub");
+            
+
+            TalkSub.onclick = function(){
+                var str = "";
+                if(TalkWords.value == ""){
+                    alert("消息不能为空");
+                    return;
+                }
+                if(Who.value == 1){
+                    str = '<div class="atalk"><img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"><sapn class="title">11/09 09:33</sapn><br><span>' + TalkWords.value +'</span></div>';
+                }
+                else{
+                    str = '<div class="btalk"><sapn class="title">11/09 09:33</sapn><img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"><br><span>' + TalkWords.value +'</span></div>' ;  
+                }
+                Words.innerHTML = Words.innerHTML + str;
+                Words.scrollTop = Words.scrollHeight;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="talk_con">
+    	<div class="header">
+		<img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"><span class="name">小强</span>
+        <div class="cont">
+        
+        </div>
+	    </div>
+        <div class="talk_show" id="words" style="overflow-y:auto ">
+            <div class="atalk">
+                <img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png">
+            	<sapn class="title">11/09 09:33</sapn><br>
+            	<span id="asay">您好！</span>
+            </div>
+            <div class="btalk">
+                
+            	<sapn class="title">11/09 09:33</sapn>
+            	<img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"><br>
+            	<span id="bsay">您好</span></div>
+            <div class="atalk">
+            	<img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png">
+            	<sapn class="title">11/09 09:33</sapn><br>
+            	<span id="asay">我这里有一个网站，你可以去看一下：<a href="http://wwww.grapecity.cn/career/challenge.hmtl">http://wwww.grapecity.cn/career/challenge.hmtl</a>
+            	</span></div>
+            	<div class="btalk">
+                
+            	<sapn class="title">11/09 09:33</sapn>
+            	<img src="http://static.galileo.xiaojukeji.com/static/tms/default_header.png"><br>
+            	<span id="bsay">好的，我这就去看看，多谢~</span></div>
+        </div>
+        <div class="talk_input">
+            <select class="whotalk" id="who">
+                <option value="0">我</option>
+                <option value="1">小强</option>
+            </select>
+            <input type="text" class="talk_word" id="talkwords">
+            <input type="button" value="发送" class="talk_sub" id="talksub">
+        </div>
+    </div>
+</body>
+</html>

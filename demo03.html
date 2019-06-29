@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>结构伪类选择器</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin:0px;
+		}
+		.demo{
+			border:1px solid #ccc;
+			width:300px;
+			margin: 100px auto;
+			padding:10px;
+		}
+		.demo li{
+			float:left;
+			list-style:none;
+			padding:2px;
+			border:1px solid #ccc;
+			margin-right:4px;
+			width:20px;
+		}
+		.clearfix{
+			clear:both;
+			overflow: auto;
+
+		}
+		.demo a{
+			display: block;
+			width:20px;
+			height:20px;
+			text-align: center;
+			border-radius: 10px;
+			background-color: #f36;
+			text-decoration: none;
+		}
+		.demo  li:first-child{
+			background-color: #ccc;
+		}
+		.demo  li:nth-child(5){
+			background-color: #0f0;
+		}
+		.demo  li:nth-child(2n){
+			background-color: #000;
+		}
+		.demo  li:nth-child(n+6){
+			background-color: #0ff;
+		}
+		.demo  li:nth-last-child(2){
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+           <ul class="clearfix">
+	       <li><a href="">1</a></li>
+	       <li><a href="">2</a></li>
+	       <li><a href="">3</a></li>
+	       <li><a href="">4</a></li>
+	       <li><a href="">5</a></li>
+	       <li><a href="">6</a></li>
+	       <li><a href="">7</a></li>
+	       <li><a href="">8</a></li>
+	       <li><a href="">9</a></li>
+	       <li><a href="">10</a></li>
+	   </ul>
+	</div>
+
+</body>
+</html>

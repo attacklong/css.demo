@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>heart</title>
+    <style type="text/css">
+    	.heart{
+    		width:100px;
+    		height:90px;
+    		margin:50px auto;
+    		position: relative;
+    	}
+    	.heart::before{
+    		content: '';
+    		position: absolute;
+    		width:50px;
+    		height:80px;
+    		background-color: red;
+    		border-radius: 50px 40px 0px 0px;
+    		-webkit-transform-origin:0 100%;
+			-moz-transform-origin:0 100%;
+			-ms-transform-origin:0 100%;
+			-o-transform-origin:0 100%;
+			transform-origin:0 100%;
+			-webkit-transform:rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+			-o-transform:rotate(-45deg);
+			transform:rotate(-45deg);
+			left:50px;
+    	}
+    	.heart::after{
+    		content: '';
+    		position: absolute;
+    		width:50px;
+    		height:80px;
+    		background-color: red;
+    		border-radius: 50px 40px 0px 0px;
+    		-webkit-transform-origin:100% 100%;
+			-moz-transform-origin:100% 100%;
+			-ms-transform-origin:100% 100%;
+			-o-transform-origin:100% 100%;
+			transform-origin:100% 100%;
+			-webkit-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			-o-transform:rotate(45deg);
+			transform:rotate(45deg);
+			
+    	}
+    	.egg{
+    		width:60px;
+    		height:90px;
+    		background-color: #fa3;
+    		float:right;
+    		margin-top:-140px;
+    		margin-right:18%;
+    		border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    	}
+    	.i{
+    		width:20px;
+    		height:90px;
+    		float:left;
+    		margin-top:-140px;
+    		margin-left:20%;
+    		background-color: #0f0;
+    	}
+    </style>
+</head>
+<body>
+<div class="heart"></div>
+<div class="egg"></div>
+<div class="i"></div>
+</body>
+</html>
